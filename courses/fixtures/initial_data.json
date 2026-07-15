@@ -1,0 +1,142 @@
+[
+{
+    "model": "courses.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$HjH0lHqBfIHzF2xVfC6mGo$zxiqNHroQD4/P/N161UUrsU+7GQTcCWUyeskkF12d3Q=",
+        "last_login": "2026-07-15T02:24:39.343Z",
+        "is_superuser": true,
+        "username": "laurensius",
+        "first_name": "",
+        "last_name": "",
+        "email": "111202113597@mhs.dinus.ac.id",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-07-15T02:23:19.746Z",
+        "role": "STUDENT",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.user",
+    "pk": 3,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "budi_instruktur",
+        "first_name": "",
+        "last_name": "",
+        "email": "budi@lms.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-07-15T02:38:59.215Z",
+        "role": "INSTRUCTOR",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.user",
+    "pk": 4,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "laurensius_student",
+        "first_name": "",
+        "last_name": "",
+        "email": "laurensius@lms.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-07-15T02:38:59.247Z",
+        "role": "STUDENT",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.category",
+    "pk": 1,
+    "fields": {
+        "name": "Laurensius Marcellano",
+        "slug": "laurensius-marcellano",
+        "parent": null
+    }
+},
+{
+    "model": "courses.category",
+    "pk": 2,
+    "fields": {
+        "name": "Technology",
+        "slug": "technology",
+        "parent": null
+    }
+},
+{
+    "model": "courses.category",
+    "pk": 3,
+    "fields": {
+        "name": "Design",
+        "slug": "design",
+        "parent": null
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+        "title": "Belajar Python Pemula",
+        "slug": "belajar-python-pemula",
+        "description": "Kelas dasar pemrograman Python dari nol sampai mahir.",
+        "instructor": 3,
+        "category": 2,
+        "created_at": "2026-07-15T02:38:59.328Z"
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+        "title": "Mastering Django Web",
+        "slug": "mastering-django-web",
+        "description": "Membangun aplikasi web berskala enterprise dengan Django Framework.",
+        "instructor": 3,
+        "category": 2,
+        "created_at": "2026-07-15T02:38:59.370Z"
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+        "title": "UI/UX Design Fundamental",
+        "slug": "ui-ux-design-fundamental",
+        "description": "Prinsip dasar merancang antarmuka aplikasi yang ramah pengguna.",
+        "instructor": 3,
+        "category": 3,
+        "created_at": "2026-07-15T02:38:59.401Z"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 1,
+    "fields": {
+        "course": 1,
+        "title": "Pengenalan Variabel",
+        "content": "Variabel adalah penampung data.",
+        "order": 1
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 2,
+    "fields": {
+        "course": 1,
+        "title": "Struktur Kondisi IF ELSE",
+        "content": "Logika percabangan program.",
+        "order": 2
+    }
+}
+]
