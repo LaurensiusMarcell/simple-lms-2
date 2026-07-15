@@ -1,34 +1,32 @@
-# Progress 1: Simple LMS (Learning Management System) - Docker & Django Foundation
+# Progress 2: Simple LMS - Database Design & ORM Implementation
 
 Proyek backend website Learning Management System (LMS) sederhana yang dibangun menggunakan Django (Python) dan PostgreSQL, dikemas secara penuh menggunakan Docker untuk memudahkan proses *development*.
 
 ---
 
-## 📸 Screenshot Django Welcome Page
-![Django Welcome Page](welcome-page.png)
+## Dokumentasi
+![Django Dashboard](dashboard-django.png)
+![Django Courses](django-courses.png)
+![Django Users](django-users.png)
+![Query Comparison](query-comparison.png)
+![Migration Files dan Initial Data Fixtures](after-migrationfiles)
 
-## 🚀 Cara Menjalankan Project
+## 🛠️ Prasyarat Sistem & Cara Menjalankan
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda:
+Aplikasi ini berjalan sepenuhnya di atas kontainerisasi Docker. Pastikan perangkat lunak **Docker Desktop** sudah aktif di komputer Anda, lalu jalankan rangkaian perintah berikut melalui terminal:
 
-### 1. Prasyarat
-Pastikan Anda sudah menginstal:
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-### 2. Setup Environment File
-Salin file template `.env.example` menjadi `.env` di direktori utama:
 ```bash
-cp .env.example .env
+# 1. Bangun dan jalankan service web beserta PostgreSQL di latar belakang
+docker compose up -d --build
 
-### Build dan Jalankan Kontainer
-docker compose up --build -d
-
-### Untuk menghentikan semua layanan
-docker compose down
-
-### Migrasi Database
+# 2. Sinkronisasikan skema tabel basis data
 docker compose exec web python manage.py migrate
+
+# 3. Suntikkan paket data awal fiktif (Fixtures)
+docker compose exec web python manage.py loaddata initial_data
+
+# 4. Buat akun akses utama panel kontrol
+docker compose exec web python manage.py createsuperuser
 
 ### Akses Aplikasi
 http://localhost:8080
