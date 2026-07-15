@@ -9,7 +9,7 @@ Proyek backend website Learning Management System (LMS) sederhana yang dibangun 
 ![Django Courses](django-courses.png)
 ![Django Users](django-users.png)
 ![Query Comparison](query-comparison.png)
-![Migration Files dan Initial Data Fixtures](after-migrationfiles)
+![Migration Files dan Initial Data Fixtures](after-migrationfiles.png)
 
 ## 🛠️ Prasyarat Sistem & Cara Menjalankan
 
